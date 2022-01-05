@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Word Counter</title>
+  </head>
+ 
+  <body>
+
+    <div class="container">
+        <div class="design text-center form-control">
+            <textarea class="form-control" id="word" cols="100" rows="10"></textarea>
+            <br>
+            <button onclick="countWord()">Calculate</button>
+            <br>
+            <p id="showData"></p>
+            <p id="showWord"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script>
+        const countWord = () => {
+            let noc = document.getElementById("word").value.length;
+            let now = document.getElementById("word").value;
+            now = now.match(/\w+/g);
+            console.log(now);
+            now = now.length;
+            let show = document.getElementById("showData").innerHTML = "Total Characters = "+ noc;
+            let wordShow = document.getElementById("showWord").innerHTML = "Total Words = "+ now;
+        }
+    </script>
+    <!-- by Ariful Islam Arman. Contact: arifulislamarman.web@gmail.com -->
+  </body>
+</html>
