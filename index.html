@@ -18,7 +18,7 @@
         <div class="design text-center form-control">
             <textarea class="form-control" id="word" cols="100" rows="10"></textarea>
             <br>
-            <button onclick="countWord()">Calculate</button>
+            <button onclick="countWord()">Calculate</button> <button onclick="deleteData()">CLEAR</button>
             <br>
             <p id="showData"></p>
             <p id="showWord"></p>
@@ -37,7 +37,13 @@
             let show = document.getElementById("showData").innerHTML = "Total Characters = "+ noc;
             let wordShow = document.getElementById("showWord").innerHTML = "Total Words = "+ now;
         }
+        function deleteData(){
+        document.getElementById("word").value = "";
+        document.getElementById("showData").innerHTML = "";
+        document.getElementById("showWord").innerHTML = "";
+        }
     </script>
     <!-- by Ariful Islam Arman. Contact: arifulislamarman.web@gmail.com -->
   </body>
 </html>
+
